@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love 💕</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Background animations -->
+    <div class="background-animation">
+        <div class="heart heart1">❤</div>
+        <div class="heart heart2">❤</div>
+        <div class="heart heart3">❤</div>
+        <div class="heart heart4">❤</div>
+        <div class="heart heart5">❤</div>
+        <div class="flower flower1">🌹</div>
+        <div class="flower flower2">🌹</div>
+        <div class="flower flower3">🌷</div>
+        <div class="flower flower4">🌷</div>
+        <div class="flower flower5">🌸</div>
+        <div class="flower flower6">🌸</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="title-main">Happy Birthday 🎂</h1>
+            <p class="subtitle">To My Beautiful Love 💕</p>
+            <div class="date-display">Today is your special day</div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-menu">
+            <button class="nav-btn active" data-section="hero">Home</button>
+            <button class="nav-btn" data-section="about">About</button>
+            <button class="nav-btn" data-section="age">Age</button>
+            <button class="nav-btn" data-section="gallery">Gallery</button>
+            <button class="nav-btn" data-section="videos">Videos</button>
+            <button class="nav-btn" data-section="wishes">Wishes</button>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="section hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>My Dearest 💝</h2>
+                    <p>On this special day, I want to celebrate YOU!</p>
+                    <p class="hero-quote">"You are my greatest blessing, my endless inspiration, and my forever love."</p>
+                    <div class="action-buttons">
+                        <button class="scroll-btn" onclick="smoothScroll('gallery')">View Gallery ✨</button>
+                        <button class="scroll-btn" onclick="smoothScroll('wishes')">Read Wishes 💌</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Swathi Section -->
+        <section id="about" class="section info-section">
+            <h2 class="section-title">Meet Swathi 🌟</h2>
+            <p class="section-subtitle">A gentle Libra whose name shines like her own star.</p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="info-label">Name</span>
+                    <strong>Swathi</strong>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Zodiac Sign</span>
+                    <strong>Libra</strong>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Birth Star</span>
+                    <strong>Swathi</strong>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Date of Birth</span>
+                    <strong>15 June 2008</strong>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Time of Birth</span>
+                    <strong>07:45 AM</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Age Timer Section -->
+        <section id="age" class="section timer-section">
+            <h2 class="section-title">Her Age & Time Since Birth ⏳</h2>
+            <p class="section-subtitle">Live age updated from the moment Swathi was born until now.</p>
+            <div class="timer-box">
+                <div class="timer-card">
+                    <span id="age-years">0</span>
+                    <small>Years</small>
+                </div>
+                <div class="timer-card">
+                    <span id="age-months">0</span>
+                    <small>Months</small>
+                </div>
+                <div class="timer-card">
+                    <span id="age-days">0</span>
+                    <small>Days</small>
+                </div>
+                <div class="timer-card">
+                    <span id="age-hours">0</span>
+                    <small>Hours</small>
+                </div>
+                <div class="timer-card">
+                    <span id="age-minutes">0</span>
+                    <small>Minutes</small>
+                </div>
+                <div class="timer-card">
+                    <span id="age-seconds">0</span>
+                    <small>Seconds</small>
+                </div>
+            </div>
+            <div class="timer-summary">
+                <p>Since 15 June 2008 at 07:45, Swathi has been lighting every moment with Libra grace and the glow of her birth star.</p>
+            </div>
+        </section>
+
+        <!-- Birth Star Quote Section -->
+        <section id="birth-star" class="section star-quote-section">
+            <h2 class="section-title">Her Birth Star ✨</h2>
+            <p class="section-subtitle">A beautiful star that defined her name.</p>
+            <blockquote class="star-quote">"Your birth star defines your name as the same beautiful star — Swathi, born to shine softly and brilliantly in the morning of 15 June."</blockquote>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="gallery" class="section gallery-section">
+            <h2 class="section-title">Our Beautiful Memories 📸</h2>
+            <p class="section-subtitle">Our journey together, one moment at a time</p>
+            
+            <div class="gallery-carousel-wrapper">
+                <button class="carousel-control prev" onclick="scrollGallery(-1)">‹</button>
+                <div class="gallery-carousel">
+                        <div class="gallery-card">
+                            <img src="{{ url_for('static', filename='photos/8.webp') }}" alt="Memory" class="gallery-image">
+                            <div class="gallery-card-info">Memory 1</div>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="{{ url_for('static', filename='photos/10.webp') }}" alt="Memory" class="gallery-image">
+                            <div class="gallery-card-info">Memory 2</div>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="{{ url_for('static', filename='photos/29.jpg') }}" alt="Memory" class="gallery-image">
+                            <div class="gallery-card-info">Memory 3</div>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="{{ url_for('static', filename='photos/32.jpg') }}" alt="Memory" class="gallery-image">
+                            <div class="gallery-card-info">Memory 4</div>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="{{ url_for('static', filename='photos/33.jpg') }}" alt="Memory" class="gallery-image">
+                            <div class="gallery-card-info">Memory 5</div>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="{{ url_for('static', filename='photos/34.jpg') }}" alt="Memory" class="gallery-image">
+                            <div class="gallery-card-info">Memory 6</div>
+                        </div>
+                    </div>
+                <button class="carousel-control next" onclick="scrollGallery(1)">›</button>
+            </div>
+        </section>
+
+        <!-- Photo Book Section -->
+        <section id="photo-book" class="section photo-book-section" data-pages="{{ url_for('static', filename='photos/1.jpg') }}|{{ url_for('static', filename='photos/2.jpg') }}|{{ url_for('static', filename='photos/3.jpg') }}|{{ url_for('static', filename='photos/4.jpg') }}|{{ url_for('static', filename='photos/6.jpg') }}|{{ url_for('static', filename='photos/7.jpg') }}">
+            <h2 class="section-title">Me Over The Times 📖</h2>
+            <p class="section-subtitle">A book of memories.</p>
+            <div class="book-wrapper" id="book-wrapper">
+                <div class="book-cover">
+                    <div class="cover-title">Me Over The Times</div>
+                    <div class="cover-subtitle">A special photo book with every chapter of Myself.</div>
+                </div>
+                <div class="book-pages">
+                    <button class="book-nav" id="book-prev" aria-label="Previous page">‹</button>
+                    <div class="book-page" id="book-page">
+                        <img src="" alt="Book page photo" id="book-page-img">
+                        <div class="page-number" id="book-page-number">0 / 0</div>
+                    </div>
+                    <button class="book-nav" id="book-next" aria-label="Next page">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scratch Card Section -->
+        <section id="scratch" class="section scratch-section">
+            <h2 class="section-title">Lucky Reveal Cards ✨</h2>
+            <p class="section-subtitle">Scratch the silver layer to reveal a special memory.</p>
+            <div class="scratch-grid">
+                <div class="scratch-card">
+                    <img src="{{ url_for('static', filename='photos/11.jpg') }}" alt="Lucky photo 1" class="scratch-photo">
+                    <canvas class="scratch-canvas"></canvas>
+                </div>
+                <div class="scratch-card">
+                    <img src="{{ url_for('static', filename='photos/12.jpg') }}" alt="Lucky photo 2" class="scratch-photo">
+                    <canvas class="scratch-canvas"></canvas>
+                </div>
+                <div class="scratch-card">
+                    <img src="{{ url_for('static', filename='photos/13.jpg') }}" alt="Lucky photo 3" class="scratch-photo">
+                    <canvas class="scratch-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Circular Scroll Section -->
+        <section id="circle-scroll" class="section circle-scroll-section">
+            <h2 class="section-title">Scroll in Circles ✨</h2>
+            <p class="section-subtitle">A rotating ring of memories for a magical reveal.</p>
+            <div class="circle-scroll-wrapper">
+                <div class="circle-base"></div>
+                <div class="circle-ring">
+                    <div class="circle-item item1">
+                        <img src="{{ url_for('static', filename='photos/14.jpg') }}" alt="Circular memory 1">
+                    </div>
+                    <div class="circle-item item2">
+                        <img src="{{ url_for('static', filename='photos/15.jpg') }}" alt="Circular memory 2">
+                    </div>
+                    <div class="circle-item item3">
+                        <img src="{{ url_for('static', filename='photos/16.jpg') }}" alt="Circular memory 3">
+                    </div>
+                    <div class="circle-item item4">
+                        <img src="{{ url_for('static', filename='photos/21.jpg') }}" alt="Circular memory 4">
+                    </div>
+                    <div class="circle-item item5">
+                        <img src="{{ url_for('static', filename='photos/22.jpg') }}" alt="Circular memory 5">
+                    </div>
+                    <div class="circle-item item6">
+                        <img src="{{ url_for('static', filename='photos/24.jpg') }}" alt="Circular memory 6">
+                    </div>
+                </div>
+                <div class="circle-center">
+                    <h3>Love in Motion</h3>
+                    <p>Keep scrolling to feel the circle of memories.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="section videos-section">
+            <h2 class="section-title">Special Moments 🎥</h2>
+            <p class="section-subtitle">Videos that capture our love story</p>
+            
+            <div class="videos-container">
+                <div class="video-item">
+                    <video controls>
+                        <source src="{{ url_for('static', filename='videos/35.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="{{ url_for('static', filename='videos/5.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wishes Section -->
+        <section id="wishes" class="section wishes-section">
+            <h2 class="section-title">My Wishes For You 💌</h2>
+            <p class="section-subtitle">Heartfelt messages for the one I love</p>
+            
+            <div class="wishes-container" id="wishes-container">
+                <!-- Wishes loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Special Countdown -->
+        <section class="section countdown-section">
+            <div class="countdown-box">
+                <h3>You are Amazing! 🌟</h3>
+                <p>Here's why I love you:</p>
+                <div class="reasons">
+                    <div class="reason-item">💞 Your Beautiful smile</div>
+                    <div class="reason-item">🌟 Your Kindness</div>
+                    <div class="reason-item">🌟 Your Caring</div>
+                    <div class="reason-item">🎵 Your Smile</div>
+                    <div class="reason-item">💝 Your Love</div>
+                    <div class="reason-item">💖Your Affection</div>
+                    <div class="reason-item">🎤 Your Voice</div>
+                    <div class="reason-item">✨ Everything about you</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Name Photo Mask Section -->
+        <section id="name-mask" class="section name-section">
+            <h2 class="section-title">My Love — Swathi 💖</h2>
+            <div class="name-mask-wrapper">
+                <svg viewBox="0 0 1200 400" class="name-mask-svg" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <mask id="textMask">
+                            <rect x="0" y="0" width="1200" height="400" fill="black" />
+                            <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" font-weight="900" font-size="200" fill="white">Swathi</text>
+                        </mask>
+                    </defs>
+
+                    <g mask="url(#textMask)">
+                        <!-- Row 1 -->
+                        <image href="{{ url_for('static', filename='photos/9.webp') }}" x="0" y="0" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/17.jpg') }}" x="200" y="0" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/18.jpg') }}" x="400" y="0" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/19.jpg') }}" x="600" y="0" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/20.jpg') }}" x="800" y="0" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/23.jpg') }}" x="1000" y="0" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+
+                        <!-- Row 2 -->
+                        <image href="{{ url_for('static', filename='photos/25.jpg') }}" x="0" y="133" width="200" height="134" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/26.jpg') }}" x="200" y="133" width="200" height="134" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/27.jpg') }}" x="400" y="133" width="200" height="134" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/28.jpg') }}" x="600" y="133" width="200" height="134" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/30.jpg') }}" x="800" y="133" width="200" height="134" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/31.jpg') }}" x="1000" y="133" width="200" height="134" preserveAspectRatio="xMidYMid slice" />
+
+                        <!-- Row 3 (repeats of used images) -->
+                        <image href="{{ url_for('static', filename='photos/8.webp') }}" x="0" y="267" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/10.webp') }}" x="200" y="267" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/29.jpg') }}" x="400" y="267" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/32.jpg') }}" x="600" y="267" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/33.jpg') }}" x="800" y="267" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                        <image href="{{ url_for('static', filename='photos/34.jpg') }}" x="1000" y="267" width="200" height="133" preserveAspectRatio="xMidYMid slice" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <!-- Proposal Section -->
+        <section id="proposal" class="section proposal-section">
+            <h2 class="section-title">A Special Moment 💍</h2>
+            <p class="section-subtitle">When I asked her to be mine</p>
+            <div class="proposal-card">
+                <div class="proposal-image">
+                    <img src="{{ url_for('static', filename='photos/37.jpg') }}" alt="Proposal photo">
+                    <div class="hearts">
+                        <span class="heart">❤</span>
+                        <span class="heart">💕</span>
+                        <span class="heart">✨</span>
+                        <span class="heart">💖</span>
+                    </div>
+                </div>
+                <div class="proposal-quote">
+                    <blockquote>
+                        "I knelt down and asked for your hand — not to change you, but to spend every chapter of my life loving you. Will you be my forever?"
+                    </blockquote>
+                    <p class="quote-author">— Always Yours</p>
+                    <div class="proposal-buttons">
+                        <button class="btn-yes" onclick="triggerConfetti()">Yes 💕</button>
+                        <button class="btn-no" id="noButton">No 😢</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>Made with 💕 for your special day</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

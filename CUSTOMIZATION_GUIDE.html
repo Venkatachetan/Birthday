@@ -1,0 +1,215 @@
+<!-- CUSTOMIZATION GUIDE FOR ADDING PHOTOS -->
+
+<!-- ============================================ -->
+<!-- HOW TO ADD YOUR PHOTOS TO THE GALLERY -->
+<!-- ============================================ -->
+
+<!-- Step 1: Create a static/photos folder next to wish.py
+        Birthday/
+        ├── wish.py
+        ├── templates/
+        ├── static/
+        │   └── photos/  <-- Create this folder and add your images
+-->
+
+<!-- Step 2: Replace the placeholder gallery items with your photos.
+     Open templates/index.html and find the gallery-grid section.
+     Replace each gallery-item with an actual image:
+-->
+
+<!-- EXAMPLE: Replace this code in the gallery-grid section:
+
+    <!-- OLD CODE - Replace with code below -->
+    <div class="gallery-item">
+        <div class="photo-placeholder">
+            <span>📷 Add your photo here</span>
+            <p>Replace with your beautiful moments together</p>
+        </div>
+    </div>
+
+    <!-- NEW CODE - Use this instead -->
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='photos/photo1.jpg') }}" 
+             alt="Our beautiful memories" class="gallery-image">
+    </div>
+
+-->
+
+<!-- Step 3: Add this CSS to static/style.css after the .gallery-item rules:
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1) rotate(1deg);
+    filter: brightness(1.1);
+}
+
+-->
+
+<!-- ============================================ -->
+<!-- HOW TO ADD VIDEOS -->
+<!-- ============================================ -->
+
+<!-- Step 1: Create a static/videos folder
+        Birthday/
+        ├── wish.py
+        ├── templates/
+        ├── static/
+        │   └── videos/  <-- Create this folder and add your video files (MP4 format)
+-->
+
+<!-- Step 2: Replace video placeholders in templates/index.html
+     Find the videos-container section and replace:
+-->
+
+<!-- EXAMPLE: Replace this:
+
+    <div class="video-item">
+        <div class="video-placeholder">
+            <span>🎬</span>
+            <p>Add your video here</p>
+            <small>Replace with your special video</small>
+        </div>
+    </div>
+
+     With this:
+
+    <div class="video-item">
+        <video width="100%" height="100%" controls style="border-radius: 15px;">
+            <source src="{{ url_for('static', filename='videos/video1.mp4') }}" 
+                    type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+-->
+
+<!-- ============================================ -->
+<!-- HOW TO CUSTOMIZE MESSAGES -->
+<!-- ============================================ -->
+
+<!-- Edit wish.py and modify the messages list:
+
+    @app.route('/api/messages')
+    def get_messages():
+        messages = [
+            "Write your first wish here! 💕",
+            "Write your second wish here! 🌹",
+            "Write your third wish here! ✨",
+            # Add more wishes separated by commas
+        ]
+        return {'messages': messages}
+
+-->
+
+<!-- ============================================ -->
+<!-- TIPS FOR BEST RESULTS -->
+<!-- ============================================ -->
+
+<!-- 1. PHOTO SIZE AND FORMAT:
+      - Use JPG or PNG format
+      - Recommended size: 1000x1000 pixels for gallery
+      - File size: Keep under 500KB each for fast loading
+      - Aspect ratio: Square (1:1) works best
+
+   2. VIDEO FORMAT:
+      - Use MP4 format (.mp4)
+      - Resolution: 720p or 1080p works well
+      - Keep video length: 30 seconds - 2 minutes for best experience
+      - Recommended size: 50MB - 200MB max
+
+   3. NAMING CONVENTION:
+      - Use simple names: photo1.jpg, photo2.jpg, etc.
+      - Use underscores or hyphens: my_photo.jpg or my-photo.jpg
+      - Avoid spaces in filenames
+
+   4. ORGANIZATION:
+      - Keep photos in the static/photos/ folder
+      - Keep videos in the static/videos/ folder
+      - Create subfolders if you have many files:
+        static/photos/vacation/
+        static/photos/together/
+        static/videos/memories/
+
+   5. MOBILE OPTIMIZATION:
+      - Test on mobile devices
+      - Ensure images are responsive
+      - Use CSS media queries for different screen sizes
+-->
+
+<!-- ============================================ -->
+<!-- EXAMPLE COMPLETE GALLERY -->
+<!-- ============================================ -->
+
+<!--
+
+<section id="gallery" class="section gallery-section">
+    <h2 class="section-title">Our Beautiful Memories 📸</h2>
+    <p class="section-subtitle">Our journey together, one moment at a time</p>
+    
+    <div class="gallery-container">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='photos/photo1.jpg') }}" 
+                     alt="We at the beach" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='photos/photo2.jpg') }}" 
+                     alt="Our first date" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='photos/photo3.jpg') }}" 
+                     alt="Sunset together" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='photos/photo4.jpg') }}" 
+                     alt="Having fun" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='photos/photo5.jpg') }}" 
+                     alt="Special moment" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='photos/photo6.jpg') }}" 
+                     alt="Together forever" class="gallery-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+-->
+
+<!-- ============================================ -->
+<!-- NEED HELP? -->
+<!-- ============================================ -->
+
+<!-- Common Issues:
+
+1. Images not showing?
+   - Check file path is correct
+   - Make sure images are in the static/photos/ folder
+   - Verify file names match (case-sensitive)
+
+2. Broken video links?
+   - Ensure videos are MP4 format
+   - Check videos are in static/videos/ folder
+   - Verify the file path in the src attribute
+
+3. Styling issues?
+   - Clear browser cache (Ctrl+F5)
+   - Make sure CSS file is saved
+   - Check for typos in class names
+
+4. Website not starting?
+   - Run: pip install -r requirements.txt
+   - Check port 5000 isn't in use
+   - Try: python -m flask run
+
+-->
