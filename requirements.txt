@@ -1,4 +1,2 @@
 Flask==3.0.0
 gunicorn==21.0.0
-jax==0.4.30
-jaxlib==0.4.30
