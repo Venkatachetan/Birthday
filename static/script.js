@@ -292,6 +292,35 @@ function initializeScratchCards() {
     });
 }
 
+// ===== SECRET LOVE LETTER =====
+function checkSecretWord() {
+    const input = document.getElementById('secret-word-input');
+    const hint = document.getElementById('wrong-hint');
+    const secretWord = '1528'; // 🔑 Change this to your secret word!
+
+    if (input.value.trim().toLowerCase() === secretWord) {
+        document.getElementById('letter-lock-ui').style.display = 'none';
+        document.getElementById('letter-content').style.display = 'block';
+        createParticles(window.innerWidth / 2, window.innerHeight / 2);
+    } else {
+        hint.textContent = '❌ Hmm, that\'s not right... try again 💕';
+        input.value = '';
+        input.style.borderColor = '#ff4488';
+        setTimeout(() => {
+            hint.textContent = '';
+            input.style.borderColor = 'rgba(255,105,180,0.4)';
+        }, 2000);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const secretInput = document.getElementById('secret-word-input');
+    if (secretInput) {
+        secretInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') checkSecretWord();
+        });
+    }
+});
 // Intersection Observer for scroll animations
 function addAnimationObservers() {
     const observer = new IntersectionObserver((entries) => {
