@@ -85,6 +85,13 @@
             </div>
         </section>
 
+        <!-- Birth Star Quote Section -->
+        <section id="birth-star" class="section star-quote-section">
+            <h2 class="section-title">Her Birth Star ✨</h2>
+            <p class="section-subtitle">A beautiful star that defined her name.</p>
+            <blockquote class="star-quote">"Your birth star defines your name as the same beautiful star — Swathi, born to shine softly and brilliantly in the morning of 15 June."</blockquote>
+        </section>
+
         <!-- Age Timer Section -->
         <section id="age" class="section timer-section">
             <h2 class="section-title">Her Age & Time Since Birth ⏳</h2>
@@ -120,11 +127,78 @@
             </div>
         </section>
 
-        <!-- Birth Star Quote Section -->
-        <section id="birth-star" class="section star-quote-section">
-            <h2 class="section-title">Her Birth Star ✨</h2>
-            <p class="section-subtitle">A beautiful star that defined her name.</p>
-            <blockquote class="star-quote">"Your birth star defines your name as the same beautiful star — Swathi, born to shine softly and brilliantly in the morning of 15 June."</blockquote>
+        <!-- Photo Book Section -->
+        <section id="photo-book" class="section photo-book-section" data-pages="{{ url_for('static', filename='photos/1.jpg') }}|{{ url_for('static', filename='photos/2.jpg') }}|{{ url_for('static', filename='photos/3.jpg') }}|{{ url_for('static', filename='photos/4.jpg') }}|{{ url_for('static', filename='photos/6.jpg') }}|{{ url_for('static', filename='photos/7.jpg') }}">
+            <h2 class="section-title">Me Over The Times 📖</h2>
+            <p class="section-subtitle">A book of memories.</p>
+            <div class="book-wrapper" id="book-wrapper">
+                <div class="book-cover">
+                    <div class="cover-title">Me Over The Times</div>
+                    <div class="cover-subtitle">A special photo book with every chapter of Myself.</div>
+                </div>
+                <div class="book-pages">
+                    <button class="book-nav" id="book-prev" aria-label="Previous page">‹</button>
+                    <div class="book-page" id="book-page">
+                        <img src="" alt="Book page photo" id="book-page-img">
+                        <div class="page-number" id="book-page-number">0 / 0</div>
+                    </div>
+                    <button class="book-nav" id="book-next" aria-label="Next page">›</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Circular Scroll Section -->
+        <section id="circle-scroll" class="section circle-scroll-section">
+            <h2 class="section-title">Scroll in Circles ✨</h2>
+            <p class="section-subtitle">A rotating ring of memories for a magical reveal.</p>
+            <div class="circle-scroll-wrapper">
+                <div class="circle-base"></div>
+                <div class="circle-ring">
+                    <div class="circle-item item1">
+                        <img src="{{ url_for('static', filename='photos/14.jpg') }}" alt="Circular memory 1">
+                    </div>
+                    <div class="circle-item item2">
+                        <img src="{{ url_for('static', filename='photos/15.jpg') }}" alt="Circular memory 2">
+                    </div>
+                    <div class="circle-item item3">
+                        <img src="{{ url_for('static', filename='photos/16.jpg') }}" alt="Circular memory 3">
+                    </div>
+                    <div class="circle-item item4">
+                        <img src="{{ url_for('static', filename='photos/21.jpg') }}" alt="Circular memory 4">
+                    </div>
+                    <div class="circle-item item5">
+                        <img src="{{ url_for('static', filename='photos/22.jpg') }}" alt="Circular memory 5">
+                    </div>
+                    <div class="circle-item item6">
+                        <img src="{{ url_for('static', filename='photos/24.jpg') }}" alt="Circular memory 6">
+                    </div>
+                </div>
+                <div class="circle-center">
+                    <h3>Love in Motion</h3>
+                    <p>Keep scrolling to feel the circle of memories.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Scratch Card Section -->
+        <section id="scratch" class="section scratch-section">
+            <h2 class="section-title">Lucky Reveal Cards ✨</h2>
+            <p class="section-subtitle">Scratch the silver layer to reveal a special memory.</p>
+            <div class="scratch-grid">
+                <div class="scratch-card">
+                    <img src="{{ url_for('static', filename='photos/11.jpg') }}" alt="Lucky photo 1" class="scratch-photo">
+                    <canvas class="scratch-canvas"></canvas>
+                </div>
+                <div class="scratch-card">
+                    <img src="{{ url_for('static', filename='photos/12.jpg') }}" alt="Lucky photo 2" class="scratch-photo">
+                    <canvas class="scratch-canvas"></canvas>
+                </div>
+                <div class="scratch-card">
+                    <img src="{{ url_for('static', filename='photos/13.jpg') }}" alt="Lucky photo 3" class="scratch-photo">
+                    <canvas class="scratch-canvas"></canvas>
+                </div>
+            </div>
         </section>
 
         <!-- Photo Gallery Section -->
@@ -164,78 +238,7 @@
             </div>
         </section>
 
-        <!-- Photo Book Section -->
-        <section id="photo-book" class="section photo-book-section" data-pages="{{ url_for('static', filename='photos/1.jpg') }}|{{ url_for('static', filename='photos/2.jpg') }}|{{ url_for('static', filename='photos/3.jpg') }}|{{ url_for('static', filename='photos/4.jpg') }}|{{ url_for('static', filename='photos/6.jpg') }}|{{ url_for('static', filename='photos/7.jpg') }}">
-            <h2 class="section-title">Me Over The Times 📖</h2>
-            <p class="section-subtitle">A book of memories.</p>
-            <div class="book-wrapper" id="book-wrapper">
-                <div class="book-cover">
-                    <div class="cover-title">Me Over The Times</div>
-                    <div class="cover-subtitle">A special photo book with every chapter of Myself.</div>
-                </div>
-                <div class="book-pages">
-                    <button class="book-nav" id="book-prev" aria-label="Previous page">‹</button>
-                    <div class="book-page" id="book-page">
-                        <img src="" alt="Book page photo" id="book-page-img">
-                        <div class="page-number" id="book-page-number">0 / 0</div>
-                    </div>
-                    <button class="book-nav" id="book-next" aria-label="Next page">›</button>
-                </div>
-            </div>
-        </section>
 
-        <!-- Scratch Card Section -->
-        <section id="scratch" class="section scratch-section">
-            <h2 class="section-title">Lucky Reveal Cards ✨</h2>
-            <p class="section-subtitle">Scratch the silver layer to reveal a special memory.</p>
-            <div class="scratch-grid">
-                <div class="scratch-card">
-                    <img src="{{ url_for('static', filename='photos/11.jpg') }}" alt="Lucky photo 1" class="scratch-photo">
-                    <canvas class="scratch-canvas"></canvas>
-                </div>
-                <div class="scratch-card">
-                    <img src="{{ url_for('static', filename='photos/12.jpg') }}" alt="Lucky photo 2" class="scratch-photo">
-                    <canvas class="scratch-canvas"></canvas>
-                </div>
-                <div class="scratch-card">
-                    <img src="{{ url_for('static', filename='photos/13.jpg') }}" alt="Lucky photo 3" class="scratch-photo">
-                    <canvas class="scratch-canvas"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <!-- Circular Scroll Section -->
-        <section id="circle-scroll" class="section circle-scroll-section">
-            <h2 class="section-title">Scroll in Circles ✨</h2>
-            <p class="section-subtitle">A rotating ring of memories for a magical reveal.</p>
-            <div class="circle-scroll-wrapper">
-                <div class="circle-base"></div>
-                <div class="circle-ring">
-                    <div class="circle-item item1">
-                        <img src="{{ url_for('static', filename='photos/14.jpg') }}" alt="Circular memory 1">
-                    </div>
-                    <div class="circle-item item2">
-                        <img src="{{ url_for('static', filename='photos/15.jpg') }}" alt="Circular memory 2">
-                    </div>
-                    <div class="circle-item item3">
-                        <img src="{{ url_for('static', filename='photos/16.jpg') }}" alt="Circular memory 3">
-                    </div>
-                    <div class="circle-item item4">
-                        <img src="{{ url_for('static', filename='photos/21.jpg') }}" alt="Circular memory 4">
-                    </div>
-                    <div class="circle-item item5">
-                        <img src="{{ url_for('static', filename='photos/22.jpg') }}" alt="Circular memory 5">
-                    </div>
-                    <div class="circle-item item6">
-                        <img src="{{ url_for('static', filename='photos/24.jpg') }}" alt="Circular memory 6">
-                    </div>
-                </div>
-                <div class="circle-center">
-                    <h3>Love in Motion</h3>
-                    <p>Keep scrolling to feel the circle of memories.</p>
-                </div>
-            </div>
-        </section>
 
         <!-- Videos Section -->
         <section id="videos" class="section videos-section">
